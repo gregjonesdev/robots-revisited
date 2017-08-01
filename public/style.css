@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-family: verdana;
+}
+
+.robot {
+  height: max-content;
+  width: 150px;
+  margin: 10px 5px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.pic {
+  width: 100%;
+  text-align: center;
+}
+
+.name {
+  color: blue;
+  font-size: 1.2em;
+  margin-bottom: 3px;
+}
+
+.nojob {
+  color: red;
+}
