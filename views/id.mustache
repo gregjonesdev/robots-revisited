@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="profilestyle.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {{#robots}}
+    <div class = profile-page>
+        <div class= "left top"><img src = {{avatar}}></img></div>
+        <div class = "right top"><span class="name">{{name}}</span>
+          <p>
+            {{#address.city}}{{address.city}}, {{/address.city}}
+            {{#address.country}}{{address.country}} | {{/address.country}}
+            {{#job}}{{job}}, {{company}}{{/job}}
+            {{^job}}<span class="nojob">Available for hire</span>{{/job}}
+          </p>
+          <p>
+            {{#email}}{{email}} | {{/email}}
+            {{#phone}}{{phone}}{{/phone}}
+
+          </p>
+
+
+
+        </div>
+        <div class = "left bottom">
+          {{#university}}Education{{/university}}
+          <p>Skills</p>
+          </div>
+        <div class = "right bottom">
+          {{university}}
+          <p>{{#skills}}{{.}}<br>{{/skills}}</p>
+
+        </div>
+
+
+
+
+    </div>
+    {{/robots}}
+  </body>
+</html>

@@ -6,25 +6,22 @@
     <title></title>
   </head>
   <body>
-    {{#robots}}
-      <div class="robot">
-        <div class="pic">
-          <img src={{avatar}} alt={{username}} "logo">
-        </div>
-        <div class="name">
-          {{username}}
-        </div>
-        {{#job}}
-          <div class="job">
-            {{job}}, {{company}}
+    <div class="links">
+      <a href="/working">Robots Currently Working</a><br>
+      <a href="/notworking">Robots Seeking Employment</a>
+    </div>
+      {{#robots}}
+
+        <a href={{id}}>
+          <div>
+            <img src={{avatar}} alt="profile pic"></img>
+            <p class="name">{{name}}</p>
+            {{#job}}<p>{{job}}, {{company}}{{/job}}
+            {{^job}}<span class="available">Available for hire</span>{{/job}}
+            </p>
           </div>
-        {{/job}}
-        {{^job}}
-          <div class="nojob">
-            Available for Hire
-          </div>
-        {{/job}}
-      </div>
-    {{/robots}}
+        </a>
+      {{/robots}}
+    <!--</div>-->
   </body>
 </html>

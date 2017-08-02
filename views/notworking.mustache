@@ -6,17 +6,19 @@
     <title></title>
   </head>
   <body>
-      {{#robots}}
 
-      {{#job}}
+    {{#robots}}
+      {{^job}}
         <a href={{id}}>
           <div>
             <img src={{avatar}} alt="profile pic"></img>
             <p class="name">{{name}}</p>
-            <p>{{job}}, {{company}}</p>
+            <span class="available">Available for hire</span>
+            </p>
           </div>
         </a>
-        {{/job}}
-      {{/robots}}
+      {{/job}}
+    {{/robots}}
+    <!--</div>-->
   </body>
 </html>
